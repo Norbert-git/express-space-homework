@@ -7,6 +7,10 @@ const app = express();
 // * Your mission is to complete the app
 // * The app will need routes for index and show
 // * The app will need views for index and show
+
+// * The app will need routes for new and create
+// * The app will need views for new (create will be handled in the controller)
+// * After creating a new rover, render the index view
 //
 // * MAIN GOAL:
 // * User should be able to click on a mission’s name on the index page, and be taken to that mission’s show page
