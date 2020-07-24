@@ -4,11 +4,10 @@ const app = express();
 
 const marsMissions = require('./models/marsMissions.js')
 
-// run `npm install` to install dependencies in package.json
 
 // * Your mission is to complete the app
 // * The app will need routes for index and show
-// * The app will need views for index and show
+
 
 // * The app will need routes for new and create
 // * The app will need views for new (create will be handled in the controller)
@@ -21,19 +20,26 @@ const marsMissions = require('./models/marsMissions.js')
 // * Bonus/Hungry for More: add static css to style the pages (google how)
 
 // NOTES:
-// ejs has not been installed
-// views folder has not been created
 // views/missions folder has not been created
 
 // PORT
 const port = 3000;
 
 // INDEX Route
+// INDEX ROUTE 
+app.get('/marsMissions', (request, response) => {
+  response.render('index.ejs', { marsMissions })
+})
 // send data to 'missions/index.ejs' view
 // the view should display just the names of each mission
-// display the mission names as <li> in a <ul> with the class name "missions"
 
 // SHOW Route
+// SHOW ROUTE 
+app.get('/marsMissions:index', (request, response) => {
+  response.render('show.ejs', {
+      marsMissions: marsMissions[request.params.index]
+  })
+})
 // send data to 'missions/show.ejs' view
 // the view should display all the data for a single mission
 

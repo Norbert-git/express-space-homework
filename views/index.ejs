@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="/css/app.css">
+    </head>
+    <body>
+        <h1>Missions index page</h1>
+        <ul>
+            <% for(let i = 0; i < marsMissions.length; i++) { %>
+                <li>
+                    <a class='mission' href="/marsMissions/<%= i %>"><%=marsMissions[i].name; %></a> 
+                    
+                </li>
+            <% } %>
+        </ul>
+    </body>
+</html>
